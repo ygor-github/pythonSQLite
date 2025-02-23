@@ -1,0 +1,3 @@
+[submodule "oreilly_getting_started_with_sql"]
+	path = oreilly_getting_started_with_sql
+	url = https://github.com/thomasnield/oreilly_getting_started_with_sql
