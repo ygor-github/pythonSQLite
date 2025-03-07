@@ -1,6 +1,6 @@
 from tkinter import *
 
-class Gui():
+class Gui:
     """Graphic Interface Class"""
     x_pad = 5
     y_pad = 3
@@ -19,7 +19,7 @@ class Gui():
     
     #Create Objects
     lblname = Label(window, text='Name')
-    lblLastName = Label(window, text='LastName')
+    lblLastName = Label(window, text='Last Name')
     lblemail = Label(window, text='Email')
     lblcpf = Label(window, text='CPF')
     entName = Entry(window, textvariable=txtName, width=width_entry)
@@ -69,8 +69,9 @@ class Gui():
             child.grid_configure(padx=0, pady=0, sticky='NS')
         else:
             child.grid_configure(padx=x_pad, pady=y_pad, sticky='N')
-            
-    def run(self):
+    
+    @staticmethod
+    def run():
         Gui.window.mainloop()
             
 if __name__ == "__main__":
