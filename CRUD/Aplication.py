@@ -44,7 +44,7 @@ def del_command():
     else:
         print("Error: Please, Select a Client to Delete.")
     
-def get_selected_row():
+def get_selected_row(event=None):
     global selected
     try:
         selection = app.listClients.curselection()
@@ -59,7 +59,7 @@ def get_selected_row():
             app.entEmail.insert(END, selected[3])
             app.entCPF.delete(0,END)
             app.entCPF.insert(END, selected[4])
-            return selected
+            #return selected
         else:
             print("Error: Please, select a row")
     except IndexError:
