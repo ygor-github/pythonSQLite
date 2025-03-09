@@ -60,10 +60,10 @@ class TransactionObject:
                 trans.disconnect()
                 return True
             except sql.Error as e:
-                print(f"Error al insertar: {e}")
+                print(f"Error to try insert: {e}")
                 return False
         else:
-            print("Error: Todos los campos deben estar completos.")
+            print("Error: Must complete all the fields")
             return False
     
     @staticmethod

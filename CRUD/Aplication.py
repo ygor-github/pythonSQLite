@@ -44,7 +44,7 @@ def del_command():
     else:
         print("Error: Please, Select a Client to Delete.")
     
-def get_selected_row(event):
+def get_selected_row():
     global selected
     try:
         selection = app.listClients.curselection()
@@ -61,9 +61,9 @@ def get_selected_row(event):
             app.entCPF.insert(END, selected[4])
             return selected
         else:
-            print("Error: Por favor, seleccione un cliente.")
+            print("Error: Please, select a row")
     except IndexError:
-        print("Error: Por favor, seleccione un cliente.")
+        print("Error: Please, select a row")
 
 if __name__ == '__main__':
     app = Gui()
@@ -75,9 +75,3 @@ if __name__ == '__main__':
     app.btnUpdate.configure(command=update_command)
     app.btnClose.configure(command=app.window.destroy)
     app.run()
-    
-    
-   
-   
-
-        
